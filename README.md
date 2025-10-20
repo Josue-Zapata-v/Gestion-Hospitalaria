@@ -27,9 +27,9 @@ Sistema de gestión de pacientes desarrollado con **Spring Boot**, **Spring Data
 
 ## 🛠 Tecnologías
 
-- **Backend:** Spring Boot 3.x, Spring Data JPA, Hibernate
+- **Backend:** Spring Boot 3.5.6, Spring Data JPA, Hibernate
 - **Frontend:** Thymeleaf, Bootstrap 5, HTML5, CSS3
-- **Base de Datos:** MySQL 8.0
+- **Base de Datos:** MySQL 
 - **Lenguaje:** Java 17+
 - **Gestión de Dependencias:** Maven 3.6+
 
