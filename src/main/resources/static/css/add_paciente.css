@@ -1,0 +1,45 @@
+/* styles.css */
+
+/* Estilos de fondo y fuente */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef; /* Un fondo ligeramente gris para que el card resalte */
+}
+
+/* Estilos generales del contenedor y tarjeta */
+.container {
+    max-width: 850px; /* Ancho cómodo para el formulario de dos columnas */
+}
+
+.card {
+    border: none; /* Eliminar borde si el shadow es suficiente */
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #007bff !important; /* Azul primario */
+    color: white;
+    padding: 1.5rem 1.5rem;
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+/* Estilos para campos y labels */
+.form-label {
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 0.3rem;
+}
+
+.form-control, .form-select {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+}
+
+/* Estilo para la línea divisoria de los botones */
+.border-top {
+    border-top: 1px solid #dee2e6 !important;
+}

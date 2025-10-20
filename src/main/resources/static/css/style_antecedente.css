@@ -1,0 +1,58 @@
+/* static/css/style_antecedente.css */
+
+/* Estilos de fuente y fondo general */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; /* Color de fondo ligero */
+}
+
+/* Contenedor principal para centrar */
+.container {
+    max-width: 700px; /* Limitar el ancho para formularios */
+}
+
+/* Estilos de la tarjeta */
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.75rem;
+    overflow: hidden; /* Asegura que el border-radius aplique al header */
+}
+
+/* Estilos del encabezado de la tarjeta */
+.card-header {
+    background-color: #007bff !important; /* Azul primario */
+    color: white;
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+/* Estilos para el bloque de información del paciente */
+.alert-info {
+    background-color: #e3f2fd; /* Azul claro */
+    border-color: #c1e0fc;
+    color: #0c5460;
+}
+
+/* Mejorar el aspecto del campo de texto de descripción */
+.form-control[id="descripcion"] {
+    resize: vertical; /* Permitir solo el redimensionamiento vertical */
+}
+
+/* Estilos para los botones (opcional, si quieres un toque extra) */
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+/* Espacio entre el formulario y el área de botones */
+.border-top {
+    border-top: 1px solid #dee2e6 !important;
+}

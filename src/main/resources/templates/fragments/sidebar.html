@@ -1,0 +1,37 @@
+<!-- templates/fragments/sidebar.html -->
+<div th:fragment="sidebar" class="sidebar-container">
+    <div class="sidebar">
+        <h4>Gestión Hospitalaria</h4>
+
+        <!-- 🔹 Sección superior (principal) -->
+        <nav class="nav flex-column nav-main">
+            <a class="nav-link" th:href="@{#}">
+                <i class="fa-solid fa-chart-line me-2"></i> Inicio
+            </a>
+            <a class="nav-link active" th:href="@{/pacientes/listar}">
+                <i class="fa-solid fa-user-injured me-2"></i> Pacientes
+            </a>
+            <a class="nav-link" th:href="@{#}">
+                <i class="fa-solid fa-calendar-days me-2"></i> Citas Médicas
+            </a>
+            <a class="nav-link" th:href="@{#}">
+                <i class="fa-solid fa-bed-pulse me-2"></i> Hospitalizaciones
+            </a>
+            <a class="nav-link" th:href="@{#}">
+                <i class="fa-solid fa-file-invoice-dollar me-2"></i> Facturación
+            </a>
+        </nav>
+
+        <hr class="mx-3">
+
+        <!-- 🔹 Sección inferior (fija abajo) -->
+        <nav class="nav flex-column nav-bottom">
+            <a class="nav-link" th:href="@{#}">
+                <i class="fa-solid fa-file-lines me-2"></i> Reportes
+            </a>
+            <a class="nav-link" th:href="@{#}">
+                <i class="fa-solid fa-gear me-2"></i> Configuración
+            </a>
+        </nav>
+    </div>
+</div>

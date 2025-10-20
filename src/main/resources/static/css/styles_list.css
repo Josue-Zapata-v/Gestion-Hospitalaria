@@ -1,0 +1,391 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+/* ========================= */
+/* ESTILO GENERAL DE PÁGINA */
+/* ========================= */
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F5FEFF;
+    margin: 0;
+}
+
+/* ========================= */
+/* WRAPPER DEL TÍTULO Y BOTÓN */
+/* ========================= */
+.page-header-wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: -1rem;
+}
+/* ========================= */
+/* TÍTULO PRINCIPAL */
+/* ========================= */
+.page-title {
+    margin-top: 1rem !important;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+/* Botón "Nuevo Paciente/antecedente" */
+.sidebar-main-content a.btn-success {
+    background-color: #1e86e8 !important;
+    border-color: #00BFFF !important;
+    font-weight: bold;
+    color: white !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Efecto Hover*/
+.sidebar-main-content a.btn-success:hover {
+    background-color: #1E90FF !important;
+    border-color: #1E90FF !important;
+}
+
+/* ========================= */
+/* CONTENEDOR PRINCIPAL (wrapper de tarjetas) */
+/* ========================= */
+.list-main-content {
+    padding: 2rem 1rem 3rem 1rem;
+    min-height: 100vh;
+}
+
+/* ========================= */
+/* ALTURAS DE COLUMNAS: CARDS */
+/* ========================= */
+.card-parent > .card-body > .row > .col-md-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================= */
+/* TARJETA PADRE */
+/* ========================= */
+.card.card-parent {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    margin-bottom: 24px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 1500px;
+}
+
+.card.card-parent:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+/* ========================= */
+/* SUB-TARJETAS INTERNAS */
+/* ========================= */
+.subcard {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.subcard:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.subcard h5 {
+    color: #444;
+    margin-bottom: 15px;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+/* ========================= */
+/* ÍCONO DE VISTA EN HISTORIA CLÍNICA (HC) */
+/* ========================= */
+
+.header-icons-hc {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    background-color: #e6f7ff;
+    color: #131212;
+    box-shadow: 0 1px 3px rgba(0, 123, 255, 0.2);
+}
+
+.header-icons-hc:hover {
+    background-color: #b3e0ff;
+    color: #0056b3;
+    transform: scale(1.1); /* Zoom */
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.4);
+}
+/* ========================= */
+/* TARJETA DE ANTECEDENTES MÉDICOS */
+/* ========================= */
+
+.antecedentes-card h5 {
+    color: #444444;
+    font-weight: 600;
+}
+
+.table-antecedentes {
+    margin-bottom: 0;
+    border: none;
+}
+
+.table-antecedentes th {
+    font-weight: 600;
+    color: #6c757d;
+    border-bottom: 2px solid #e9ecef;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.table-antecedentes td {
+    border-top: none;
+    border-bottom: 1px solid #f8f9fa;
+    vertical-align: middle;
+}
+
+/* Fila de acción (editar/eliminar) */
+.table-antecedentes .btn-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.table-antecedentes .btn-edit-antecedente {
+    color: #403b3b;
+}
+
+.table-antecedentes .btn-delete-antecedente {
+    color: #dc3545;
+}
+
+.table-antecedentes .btn-edit-antecedente:hover {
+    background-color: #a8d1c2;
+}
+
+.table-antecedentes .btn-delete-antecedente:hover {
+    background-color: #ffeaea;
+}
+
+/* Estilo para la fila de resumen (Ver todos) */
+.table-summary-row td {
+    border-top: 1px solid #dee2e6 !important;
+    padding-bottom: 0 !important;
+}
+
+.table-summary-row .btn-link {
+    text-align: right;
+    font-weight: 600;
+    text-decoration: none;
+    padding-right: 0;
+}
+/* ========================= */
+/* BOTONES GENERALES */
+/* ========================= */
+.list-main-content a.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 6px;
+    padding: 6px 12px;
+    min-width: 36px;
+    min-height: 36px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.list-main-content a.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Botón "Ver todos": Estilos específicos */
+.search-container a.btn-all {
+    background-color: #C8D9E5 !important;
+    color: #191313 !important;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* ========================= */
+/* SUBCARD DATOS PERSONALES */
+/* ========================= */
+.subcard.personal-data {
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 50px rgba(0,0,0,0.12);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.subcard.personal-data:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.subcard.personal-data .subcard-header {
+    margin-bottom: 40px;
+}
+
+.subcard.personal-data .subcard-header h5 {
+    margin: 0;
+    font-weight: 600;
+    color: #444;
+    border-bottom: none;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* Campos individuales */
+.subcard.personal-data .subcard-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+
+.subcard.personal-data .subcard-field:last-child {
+    border-bottom: none;
+}
+
+.subcard.personal-data .field-label {
+
+    color: #888;
+    font-weight: 500;
+}
+
+.subcard.personal-data .field-value {
+    color: #222;
+    font-weight: 700;
+}
+
+/* ========================= */
+/* ESTILOS BASE DE ÍCONOS */
+/* ========================= */
+
+.subcard.personal-data .header-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* 🟢 Estilo para el botón de editar (Normal State) */
+.subcard.personal-data .header-icons .btn-edit {
+    background-color: #b1e4d2;
+    color: #033971;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔴 Estilo CLAVE para el botón de eliminar (Normal State) */
+.subcard.personal-data .header-icons .btn-delete {
+    background-color: #ff0000;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================= */
+/* ESTILOS HOVER ESPECÍFICOS */
+/* ========================= */
+
+.subcard.personal-data .header-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* 2. Hover para EDITAR */
+.subcard.personal-data .header-icons .btn-edit:hover {
+    background-color: #87c3a8;
+    color: #033971;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 3. Hover para ELIMINAR */
+.subcard.personal-data .header-icons .btn-delete:hover {
+    background-color: #cc0000;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.4);
+}
+
+/* ========================= */
+/* FORMULARIOS DE BÚSQUEDA */
+/* ========================= */
+.list-main-content input,
+.list-main-content button {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 6px 10px;
+}
+
+.search-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.search-container .search-input {
+    border-radius: 10px;
+    padding:  16px;
+    background-color: #f5f7fb;
+    max-height: 50px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+@media (max-width: 768px) {
+    .list-main-content {
+        margin-left: 0;
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .list-main-content .col-md-4,
+    .list-main-content .col-md-8 {
+        width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .subcard {
+        margin-bottom: 15px;
+    }
+}

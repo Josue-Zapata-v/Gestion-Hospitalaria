@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+/* ======================== */
+/* Sidebar Container / Fragmento */
+.sidebar-container .sidebar {
+    width: 250px;
+    background-color: #6988ED;
+    color: white;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Título */
+.sidebar-container .sidebar h4 {
+    text-align: center;
+    margin-top: 0.8rem;
+    margin-bottom: 1.8rem;
+    font-family: 'Merriweather', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 0.5rem;
+}
+
+/* 🔹 Navegación principal */
+.sidebar-container .sidebar .nav-main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+/* Links */
+.sidebar-container .sidebar .nav-link {
+    color: white;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-container .sidebar .nav-link i {
+    width: 20px;
+    text-align: center;
+}
+
+/* Hover y activo */
+.sidebar-container .sidebar .nav-link:hover,
+.sidebar-container .sidebar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-left: 4px solid #ffffff;
+    padding-left: 16px;
+}
+
+/* Línea divisoria */
+.sidebar-container .sidebar hr {
+    border-color: rgba(255, 255, 255, 0.4);
+    margin: 1rem 0;
+}
+
+/* Parte inferior */
+.sidebar-container .sidebar .nav-bottom {
+    margin-top: auto;
+}
+
+/* Contenido principal */
+/* Contenido principal */
+.sidebar-main-content {
+    margin-left: 250px; /* Desplaza el contenido */
+    padding: 2rem;
+
+    /* 🛠️ CORRECCIÓN CLAVE: Resta el ancho del sidebar del 100% */
+    width: calc(100% - 250px);
+
+    /* 💡 Opcional: Asegura que nada se desborde accidentalmente. */
+    overflow-x: hidden;
+
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar-container .sidebar {
+        position: relative;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .sidebar-main-content {
+        margin-left: 0;
+    }
+}

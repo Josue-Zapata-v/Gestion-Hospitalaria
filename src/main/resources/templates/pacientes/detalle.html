@@ -1,0 +1,80 @@
+    <!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org" lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Detalle de Paciente</title>
+        <link rel="stylesheet" th:href="@{/css/styles.css}">
+    </head>
+    <body>
+
+    <h1>Detalle del Paciente</h1>
+
+    <!-- 📋 Información Personal -->
+    <section>
+        <h2>Datos Personales</h2>
+        <p><strong>Nombre:</strong> <span th:text="${paciente.nombres + ' ' + paciente.apellidos}"></span></p>
+        <p><strong>DNI:</strong> <span th:text="${paciente.dni}"></span></p>
+        <p><strong>Sexo:</strong> <span th:text="${paciente.sexo}"></span></p>
+        <p><strong>Correo:</strong> <span th:text="${paciente.correo}"></span></p>
+        <p><strong>Fecha de Nacimiento:</strong> <span th:text="${paciente.fechaNacimiento}"></span></p>
+        <p><strong>Teléfono:</strong> <span th:text="${paciente.telefono}"></span></p>
+        <p><strong>Estado:</strong> <span th:text="${paciente.estado}"></span></p>
+    </section>
+
+    <hr>
+
+    <!-- 🩺 Historia Clínica -->
+    <section>
+        <h2>Historia Clínica</h2>
+
+        <p><strong>ID Historia:</strong> <span th:text="${historia.idHistoria}"></span></p>
+        <p><strong>Fecha de Apertura:</strong> <span th:text="${historia.fechaApertura}"></span></p>
+
+        <div>
+            <label><strong>Observaciones:</strong></label><br>
+            <textarea rows="5" cols="60" readonly
+                      th:text="${historia.observaciones != null ? historia.observaciones : 'Sin observaciones registradas'}"></textarea>
+        </div>
+        
+
+    </section>
+
+
+    <hr>
+
+    <!-- 📝 Antecedentes Médicos -->
+    <section>
+        <h2>Antecedentes Médicos</h2>
+        <table border="1" cellpadding="5">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tipo</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="antecedente : ${historia.antecedentes}">
+                <td th:text="${antecedente.idAntecedente}"></td>
+                <td th:text="${antecedente.tipo}"></td>
+                <td th:text="${antecedente.descripcion}"></td>
+                <td>
+                    <a th:href="@{'/pacientes/' + ${paciente.idPaciente} + '/antecedentes/editar/' + ${antecedente.idAntecedente}}">Editar</a> |
+                    <a th:href="@{'/pacientes/' + ${paciente.idPaciente} + '/antecedentes/eliminar/' + ${antecedente.idAntecedente}}"
+                       onclick="return confirm('¿Seguro que deseas eliminar este antecedente?')">Eliminar</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+        <a th:href="@{'/pacientes/' + ${paciente.idPaciente} + '/antecedentes/nuevo'}">+ Agregar Antecedente</a>
+    </section>
+
+    <hr>
+
+    <a th:href="@{/pacientes/listar}">Volver al listado de pacientes</a>
+
+    </body>
+    </html>
+
